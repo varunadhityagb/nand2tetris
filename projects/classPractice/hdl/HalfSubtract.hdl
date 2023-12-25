@@ -1,0 +1,9 @@
+CHIP HalfSubtract {
+    IN a, b;
+    OUT carry, diff;
+
+    PARTS:
+    Xor(a=a, b=b, out=diff);
+    Not(in=a, out=notA);
+    And(a=notA, b=b, out=carry);
+}
